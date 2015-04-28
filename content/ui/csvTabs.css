@@ -1,0 +1,93 @@
+
+.tabs {
+  background: linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0.2), rgba(0,0,0,0.1));
+  border-radius: 4px;
+  padding-top: .2em;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 0;
+
+  cursor: default;
+}
+
+.wrapup-tabs .panels .panel, iframe.googleSheet {
+    min-width: 40em;
+}
+
+.tabs .tab {
+  display: inline-block;
+  margin: 0.2px;
+  margin-bottom: 0;
+  margin-top: 0.2em;
+  padding: .5em 1em;
+  background-color: rgba(255,255,255,0.5);
+  border: 1px solid grey;
+  border-bottom-width: 0px;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  font-family: Verdana,Arial,sans-serif;
+
+  cursor: pointer;
+}
+
+.tabs .tab.selected {
+  background: linear-gradient(to top, rgba(255,255,255,0.8), rgba(255,255,255,1.0));
+}
+
+.tabs .tab:not(.selected):hover {
+  background-color: rgba(0,0,0,0.05);exit
+  border: 1px solid rgba(0,0,0,0.7);
+  border-bottom-width: 0px;
+}
+
+.panels .panel:not(.selected) {
+  display: none;
+}
+
+.panels .panel.selected {
+  display: inherit;
+}
+
+.panels {
+  margin: 1em;
+}
+
+.panel table.wrapup-table, .panel table.wrapup-table td, .panel table.wrapup-table th {
+  border: 3px solid gray;
+}
+.panel table.wrapup-table td, .panel table.wrapup-table th {
+  padding: 0.5em;
+}
+
+table.wrapup-table {
+  border-collapse: collapse;  
+}
+
+.panels iframe.googleSheet {
+    border: none;
+    overflow: hidden;
+    margin-top: 16px;
+}
+
+.wrapup-downloadtab {
+    font-family: serif;
+}
+
+.wrapup-downloadtab > div {
+    margin: 24px 8px 0px;
+}
+
+a.googlesque {
+    font-size: 11px;
+    border-radius: 2px;
+    text-align: center;
+    min-width: 58px;
+    background-color: #f5f5f5;
+    height: 27px;
+    line-height: 27px;
+    display: inline-block;
+    text-decoration: none;
+    background-image: linear-gradient(to bottom,#f5f5f5,#e6e6e6);
+    border: 1px solid #dcdcdc;
+    border: 1px solid rgba(0,0,0,0.1);
+}

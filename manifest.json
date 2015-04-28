@@ -1,0 +1,46 @@
+{
+  "manifest_version": 2,
+  "name": "entable",
+  "label": "entable",
+  "description": "rewrites datasets, allowing them to be viewed as tables or downloaded as CSV",
+  "version": "0.0.1",
+  "config": {
+    "appengine_appname": "entable-proxy",
+    "drivehelper_server": "http://entable-proxy.appspot.com"
+  },
+    
+  "web_accessible_resources": [
+    "/manifest.json",
+    "/*.html"
+  ],
+  "sources": {
+    "jquery-2.1.1.js": "http://code.jquery.com/jquery-2.1.1.js",
+    "jquery.xpath.js": "../jquery-xpath/jquery.xpath.js",
+    "smartwrap-docmarker.js": "http://radar2.isri.cmu.edu:8000/smartwrap/export/HEAD/plugin/chrome/content/smartwrap-docmarker.js",
+    "wrapup.js": "content/js/wrapup.js",
+    "wrapup-tablify.js": "content/js/wrapup-tablify.js",
+    "entable.js": "content/js/entable.js",
+    "accessTable_template.html": "content/ui/accessTable_template.html",
+    "csvTabs.html": "content/ui/csvTabs.html",
+    "csvTabs.css": "content/ui/csvTabs.css"
+  },
+  "content_scripts": [
+    {
+      "disabled": "false",
+      "matches": ["http://*/*", "https://*/*"],
+      "css": ["csvTabs.css"],
+      "js": ["jquery-2.1.1.js",
+             "jquery.xpath.js",
+             "chrome-extension-polyfill.js",
+             "smartwrap-docmarker.js",
+             "wrapup.js",
+             "wrapup-tablify.js",
+             "entable.js",
+	     "jquery-noconflict.js"],
+      "html": [
+        "accessTable_template.html",
+        "csvTabs.html"
+      ]
+    }
+  ]
+}
